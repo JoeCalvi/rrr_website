@@ -2,6 +2,7 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import { Logger } from "../logger/logger";
 import User from "./user";
+import { requestsService } from "../services/RequestsService";
 
 class Routes {
     public express: express.Application;
@@ -26,6 +27,16 @@ class Routes {
         
         // user route
         this.express.use("/", User);
+
+        this.express.post("/requests", async (req, res, next) => {
+            try {
+                const requestData = req.body
+                const request = await requestsService.sendRequest(requestData);
+                return res.send(request);
+            } catch (error) {
+                next(error)
+            }
+        });
     }
 }
 
