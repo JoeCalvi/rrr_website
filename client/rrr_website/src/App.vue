@@ -1,85 +1,105 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <header class="navbar d-flex align-items-center elevation-3 justify-content-start">
+    <div class="d-flex gap-3 align-items-center">
+      <div>
+        <router-link :to="{ name: 'home' }">
+          <img src="../src/assets/images/RRRlogo1.png" class="header-logo ps-3 selectable
+          ">
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'home' }">
+          Home
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'about' }">
+          About
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'gallery'}">
+          Gallery
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'contact'}">
+          Contact
+        </router-link>
+      </div>
     </div>
   </header>
-
-  <RouterView />
+  <main>
+    <div class="container-fluid">
+      <div class="row justify-content-center elevation-3 sticky-top af-bg-white border-bottom border-dark">
+        <div class="col-md-4">
+          <h1 class="business-name mt-3 text-center">River Rock Roofing</h1>
+          <h2 class="font-bebas mt-3 mb-3 text-center">Roofs Done Right.</h2>
+        </div>
+      </div>
+    </div>
+    <RouterView />
+  </main>
+  <footer class="d-flex justify-content-evenly align-items-center">
+    <div class="d-none d-md-block">
+      <img src="../src/assets/images/RRRbrandLogo2.jpeg" class="gaf-logo-3" alt="">
+    </div>
+    <div class="d-flex">
+      <div>
+        <img src="../src/assets/images/RRRlogo2.png" class="footer-logo pe-3" alt="">
+      </div>
+      <div class="footer-text text-center">
+        <div>
+          208-794-3280
+        </div>
+        <div>
+          riverrockroofing@icloud.com
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-block">
+      <img src="../src/assets/images/RRRbrandLogo1.jpeg" class="gaf-logo-1" alt="">
+    </div>
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.header-logo {
+  max-width: 100px;
+  height: 60px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.nav-link {
+  color: #EAEBED;
+  text-shadow: 1px 1px 2px black;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-link:hover {
+  border-bottom: 1px solid #EAEBED;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.footer-logo {
+  max-width: 100px;
+  height: 45px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.footer-text {
+  color: #EAEBED;
+  text-shadow: 1px 1px 2px black;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+.gaf-logo-1 {
+  height: 50px;
+  width: 150px;
 }
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.gaf-logo-3 {
+  height: 50px;
+  width: 150px;
+  border: 2px solid #011d51;
 }
 </style>
