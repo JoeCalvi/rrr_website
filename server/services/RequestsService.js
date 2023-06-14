@@ -6,13 +6,13 @@ class RequestService {
     async sendRequest(requestData) {
         const request = await dbContext.Requests.create(requestData)
 
-        const courier = CourierClient({ authorizationToken: "pk_prod_QWVHCTM2ZJM0PEPKXZZE7RXP656G" });
+        const courier = CourierClient({ authorizationToken: "dk_prod_JJRNP0AHBV4Z3NJ3J18DEZ9ZY7GC" });
         const { requestId } = await courier.send({
             message: {
                 to: {
-                    email: "joecalvi.work@gmail.com"
+                    email: "joecalvi@me.com"
                 },
-                template: "JRQD2HQD5AM0XWJMQVHKTV2NR312",
+                template: "1RBHE0GHRPMBT1QZK0N79VENEXP0",
                 data: {
                     name: request.name,
                     email: request.email,
