@@ -1,0 +1,19 @@
+{
+  "name": "rrr_website",
+  "version": "1.0.0",
+  "description": "river rock roofing website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeCalvi/rrr_website.git"
+  },
+  "author": "joe calvi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeCalvi/rrr_website/issues"
+  },
+  "homepage": "https://github.com/JoeCalvi/rrr_website#readme"
+}
