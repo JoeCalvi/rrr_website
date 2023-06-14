@@ -21,6 +21,14 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@aws-sdk/credential-providers": "^3.352.0",
+    "@mongodb-js/zstd": "^1.1.0",
+    "@trycourier/courier": "^4.4.0",
+    "aws4": "^1.12.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "kerberos": "^2.0.1",
+    "snappy": "^7.2.2",
     "ts-loader": "^9.4.3"
   }
 }
