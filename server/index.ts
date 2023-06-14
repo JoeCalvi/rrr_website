@@ -1,7 +1,7 @@
 import * as http from "http";
-import App from "../../server/app";
-import { Logger } from "../../server/logger/logger";
-import { DbConnection } from "../../server/Db/DbConfig";
+import App from "./app";
+import { Logger } from "./logger/logger";
+import { DbConnection } from "./Db/DbConfig";
 
 const port = 3080;
 
