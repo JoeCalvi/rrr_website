@@ -7,13 +7,19 @@
     "end": "npx kill-port 3080"
   },
   "dependencies": {
+    "@aws-sdk/credential-providers": "^3.352.0",
+    "@mongodb-js/zstd": "^1.1.0",
     "@trycourier/courier": "^4.4.0",
+    "aws4": "^1.12.0",
     "cors": "^2.8.5",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
+    "kerberos": "^2.0.1",
+    "mongodb-client-encryption": "^2.8.0",
     "mongoose": "^7.2.4",
     "node-fetch": "^3.3.1",
+    "snappy": "^7.2.2",
     "ts-loader": "^9.4.3"
   },
   "devDependencies": {
