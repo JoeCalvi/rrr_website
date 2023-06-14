@@ -81,13 +81,13 @@ import { constactService } from "../services/ContactService";
             </div>
             <div class="d-flex justify-content-around mb-3">
               <div class="form-check">
-                <input v-model="editable.repair" class="form-check-input" type="checkbox" value="repair" id="repair">
+                <input v-model="editable.repair" class="form-check-input" type="checkbox" value="repair" id="repair" :disabled="editable.replace == true">
                 <label class="form-check-label" for="repair">
                   Repair
                 </label>
               </div>
               <div class="form-check">
-                <input v-model="editable.replace" class="form-check-input" type="checkbox" value="replace" id="replace">
+                <input v-model="editable.replace" class="form-check-input" type="checkbox" value="replace" id="replace" :disabled="editable.repair == true">
                 <label class="form-check-label" for="replace">
                   Replace
                 </label>
