@@ -3,7 +3,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/index.js",
-    "build": "tsc && webpack",
+    "build": "tsc",
     "end": "npx kill-port 3080"
   },
   "dependencies": {
