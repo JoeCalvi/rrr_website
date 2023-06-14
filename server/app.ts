@@ -31,7 +31,7 @@ class App {
     private routes(): void {
 
         this.express.get("/", (req, res, next) => {
-            res.sendFile(process.cwd() + "/client/dist/index.html");
+            res.sendFile(process.cwd() + "/client/rrr_website/dist/index.html");
         });
 
         // user route
