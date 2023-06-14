@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
     "build": "webpack",
