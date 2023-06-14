@@ -3,7 +3,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
-    "build": "webpack",
+    "build": "npm install && webpack",
     "end": "npx kill-port 3080"
   },
   "dependencies": {
