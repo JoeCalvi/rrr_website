@@ -1,7 +1,7 @@
 <script>
 
 import { ref } from "vue";
-import { constactService } from "../../services/ContactService";
+import { constactService } from "../services/ContactService";
 
     export default {
       data() {

@@ -10,7 +10,7 @@ class RequestService {
         const { requestId } = await courier.send({
             message: {
                 to: {
-                    email: "joecalvi@me.com"
+                    email: "riverrockroofing@icloud.com"
                 },
                 template: "1RBHE0GHRPMBT1QZK0N79VENEXP0",
                 data: {
