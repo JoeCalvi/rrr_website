@@ -27,7 +27,10 @@ class App {
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(process.cwd() + "/client/dist/"));
 
-        const allowedOrigins = ['http://localhost:3080'];
+        const allowedOrigins = [
+            'http://localhost:3080',
+            'https://riverrockroofing.onrender.com'
+        ];
         const options: cors.CorsOptions = {
             origin: allowedOrigins
         };
