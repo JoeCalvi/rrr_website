@@ -3,6 +3,7 @@ import * as express from "express";
 import * as cors from "cors";
 import { Logger } from "./logger/logger";
 import Routes from "./routes/routes";
+import { CorsOptions } from "cors";
 
 class App {
 
@@ -25,7 +26,13 @@ class App {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(process.cwd() + "/client/dist/"));
-        this.express.use(cors()); // Enable CORS for all routes
+
+        const allowedOrigins = ['http://localhost:3080'];
+        const options: cors.CorsOptions = {
+            origin: allowedOrigins
+        };
+
+        this.express.use(cors(options));
     }
 
     private routes(): void {

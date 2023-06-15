@@ -18,7 +18,11 @@ var App = /** @class */ (function () {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(process.cwd() + "/client/dist/"));
-        this.express.use(cors()); // Enable CORS for all routes
+        var allowedOrigins = ['http://localhost:3080'];
+        var options = {
+            origin: allowedOrigins
+        };
+        this.express.use(cors(options));
     };
     App.prototype.routes = function () {
         this.express.get("/", function (req, res, next) {

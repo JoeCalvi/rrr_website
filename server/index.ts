@@ -2,8 +2,11 @@ import * as http from "http";
 import App from "./app";
 import { Logger } from "./logger/logger";
 import { DbConnection } from "./Db/DbConfig";
+import * as dotenv from 'dotenv';
 
-const port = 3080;
+dotenv.config();
+
+const port = process.env.PORT || 3080;
 
 App.set("port", port);
 const server = http.createServer(App);
