@@ -28,6 +28,7 @@ import { constactService } from "../services/ContactService";
               }
               
               await constactService.sendMessage(messageData)
+              // TODO add a confirmation that their request was sent
 
             } catch (error) {
               console.error(error)
@@ -42,6 +43,7 @@ import { constactService } from "../services/ContactService";
 <template>
   <div class="container-fluid">
     <div class="row">
+      <!-- TODO adjust for mobile -->
       <div class="col-md-4 d-flex justify-content-center align-items-center main-height jet-bg-black af-white">
         <div class="d-flex flex-column align-items-center justify-content-evenly">
           <div class="text-center">

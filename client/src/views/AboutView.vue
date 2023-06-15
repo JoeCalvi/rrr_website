@@ -2,6 +2,7 @@
 <template>
   <div class="container-fluid">
     <div class="row jet-bg-black">
+      <!-- TODO adjust for mobile -->
       <div class="col-6 main-height d-flex align-items-center">
         <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="">
       </div>
