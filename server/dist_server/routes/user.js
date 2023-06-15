@@ -36,44 +36,63 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DbConnection = void 0;
-var mongoose_1 = require("mongoose");
-mongoose_1.default.connection.on('error', function (err) {
-    console.error('[DATABASE ERROR]:', err);
-});
-mongoose_1.default.connection.on('connection', function () {
-    console.log('DbConnection Successful');
-});
-mongoose_1.default.set('strictQuery', false);
-var DbConnection = /** @class */ (function () {
-    function DbConnection() {
+var bodyParser = require("body-parser");
+var express = require("express");
+var logger_1 = require("../logger/logger");
+var UsersService_1 = require("../services/UsersService");
+var User = /** @class */ (function () {
+    function User() {
+        this.express = express();
+        this.middleware();
+        this.routes();
+        this.users = [];
+        this.logger = new logger_1.Logger();
     }
-    DbConnection.connect = function (connectionstring) {
-        if (connectionstring === void 0) { connectionstring = 'mongodb+srv://JoeCalvi:MXSADGinbLwiLrDt@joescluster.pnavs5z.mongodb.net/rrr_db?retryWrites=true&w=majority'; }
-        return __awaiter(this, void 0, void 0, function () {
-            var status, status_1, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        status = 0;
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 4]);
-                        return [4 /*yield*/, mongoose_1.default.connect(connectionstring)];
-                    case 2:
-                        status_1 = _a.sent();
-                        console.log('[CONNECTION TO DB SUCCESSFUL]');
-                        return [2 /*return*/, status_1];
-                    case 3:
-                        e_1 = _a.sent();
-                        console.error('[MONGOOSE CONNECTION ERROR]:', 'Invalid connection string');
-                        return [2 /*return*/, status];
-                    case 4: return [2 /*return*/];
+    // Configure Express middleware
+    User.prototype.middleware = function () {
+        this.express.use(bodyParser.json());
+        this.express.use(bodyParser.urlencoded({ extended: false }));
+    };
+    User.prototype.routes = function () {
+        var _this = this;
+        // request to get all the users
+        this.express.get("/users", function (req, res, next) {
+            _this.logger.info("url:::::" + req.url);
+            res.json(_this.users);
+        });
+        // request to get all the users by userName
+        this.express.get("/users/:userName", function (req, res, next) {
+            _this.logger.info("url:::::" + req.url);
+            var user = _this.users.filter(function (user) {
+                if (req.params.userName === user.userName) {
+                    return user;
                 }
             });
+            res.json(user);
         });
+        // request to post the user
+        // req.body has object of type {firstName: "fnam1",lastName:"lnam1",userName:"username1"}
+        this.express.post("/users", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
+            var userData, user, error_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        userData = req.body;
+                        return [4 /*yield*/, UsersService_1.usersService.createUser(userData)];
+                    case 1:
+                        user = _b.sent();
+                        return [2 /*return*/, res.send(user)];
+                    case 2:
+                        error_1 = _b.sent();
+                        next(error_1);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        }); });
     };
-    return DbConnection;
+    return User;
 }());
-exports.DbConnection = DbConnection;
-//# sourceMappingURL=DbConfig.js.map
+exports.default = new User().express;
+//# sourceMappingURL=user.js.map

@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "outDir": "./dist_server",
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "CommonJS",
         "target": "ES5",
-        "allowJs": true
+        "allowJs": true,
+        "skipLibCheck": true
     },
     "exclude": [
         "node_modules",
-        "dist"
+        "./dist_server"
     ]
 }

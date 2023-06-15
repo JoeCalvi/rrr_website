@@ -39,52 +39,36 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var bodyParser = require("body-parser");
 var express = require("express");
 var logger_1 = require("../logger/logger");
-var UsersService_1 = require("../services/UsersService");
-var User = /** @class */ (function () {
-    function User() {
+var user_1 = require("./user");
+var RequestsService_1 = require("../services/RequestsService");
+var Routes = /** @class */ (function () {
+    function Routes() {
         this.express = express();
         this.middleware();
         this.routes();
-        this.users = [];
         this.logger = new logger_1.Logger();
     }
-    // Configure Express middleware
-    User.prototype.middleware = function () {
+    Routes.prototype.middleware = function () {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
     };
-    User.prototype.routes = function () {
+    Routes.prototype.routes = function () {
         var _this = this;
-        // request to get all the users
-        this.express.get("/users", function (req, res, next) {
-            _this.logger.info("url:::::" + req.url);
-            res.json(_this.users);
-        });
-        // request to get all the users by userName
-        this.express.get("/users/:userName", function (req, res, next) {
-            _this.logger.info("url:::::" + req.url);
-            var user = _this.users.filter(function (user) {
-                if (req.params.userName === user.userName) {
-                    return user;
-                }
-            });
-            res.json(user);
-        });
-        // request to post the user
-        // req.body has object of type {firstName: "fnam1",lastName:"lnam1",userName:"username1"}
-        this.express.post("/users", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
-            var userData, user, error_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
+        // user route
+        this.express.use("/", user_1.default);
+        this.express.post("/requests", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
+            var requestData, request, error_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
                     case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        userData = req.body;
-                        return [4 /*yield*/, UsersService_1.usersService.createUser(userData)];
+                        _b.trys.push([0, 2, , 3]);
+                        requestData = req.body;
+                        return [4 /*yield*/, RequestsService_1.requestsService.sendRequest(requestData)];
                     case 1:
-                        user = _a.sent();
-                        return [2 /*return*/, res.send(user)];
+                        request = _b.sent();
+                        return [2 /*return*/, res.send(request)];
                     case 2:
-                        error_1 = _a.sent();
+                        error_1 = _b.sent();
                         next(error_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
@@ -92,7 +76,7 @@ var User = /** @class */ (function () {
             });
         }); });
     };
-    return User;
+    return Routes;
 }());
-exports.default = new User().express;
-//# sourceMappingURL=user.js.map
+exports.default = new Routes().express;
+//# sourceMappingURL=routes.js.map

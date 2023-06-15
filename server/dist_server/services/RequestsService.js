@@ -36,25 +36,48 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usersService = void 0;
+exports.requestsService = void 0;
 var DbContext_1 = require("../Db/DbContext");
-var UsersService = /** @class */ (function () {
-    function UsersService() {
+var courier_1 = require("@trycourier/courier");
+var RequestService = /** @class */ (function () {
+    function RequestService() {
     }
-    UsersService.prototype.createUser = function (userData) {
+    RequestService.prototype.sendRequest = function (requestData) {
         return __awaiter(this, void 0, void 0, function () {
-            var user;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, DbContext_1.dbContext.Users.create(userData)];
+            var request, courier, requestId;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, DbContext_1.dbContext.Requests.create(requestData)];
                     case 1:
-                        user = _a.sent();
-                        return [2 /*return*/, user];
+                        request = _b.sent();
+                        courier = (0, courier_1.CourierClient)({ authorizationToken: "dk_prod_JJRNP0AHBV4Z3NJ3J18DEZ9ZY7GC" });
+                        return [4 /*yield*/, courier.send({
+                                message: {
+                                    to: {
+                                        email: "riverrockroofing@icloud.com"
+                                    },
+                                    template: "1RBHE0GHRPMBT1QZK0N79VENEXP0",
+                                    data: {
+                                        name: request.name,
+                                        email: request.email,
+                                        phone: request.phone,
+                                        description: request.description,
+                                        replace: request.replace,
+                                        repair: request.repair,
+                                        job: request.job,
+                                        type: request.type,
+                                        color: request.color,
+                                    },
+                                },
+                            })];
+                    case 2:
+                        requestId = (_b.sent()).requestId;
+                        return [2 /*return*/, request];
                 }
             });
         });
     };
-    return UsersService;
+    return RequestService;
 }());
-exports.usersService = new UsersService();
-//# sourceMappingURL=UsersService.js.map
+exports.requestsService = new RequestService();
+//# sourceMappingURL=RequestsService.js.map
