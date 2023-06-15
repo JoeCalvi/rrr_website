@@ -2,7 +2,7 @@
   "name": "server",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/dist/index.js",
+    "start": "node ./server/dist_server/index.js",
     "build": "tsc",
     "end": "npx kill-port 3080"
   },
