@@ -44,24 +44,13 @@ import { constactService } from "../services/ContactService";
   <div class="container-fluid">
     <div class="row">
       <!-- TODO adjust for mobile -->
-      <div class="col-md-4 d-flex justify-content-center align-items-center main-height jet-bg-black af-white">
-        <div class="d-flex flex-column align-items-center justify-content-evenly">
-          <div class="text-center">
-            <span class="mdi mdi-phone icon"></span>
-            <h3>Call Us</h3>  
-            <h5>208-794-3280</h5> 
+      
+      <div class="col-md-6 d-flex justify-content-center main-height jet-black af-bg-white">
+        <div class="d-flex flex-column justify-content-center align-items-center my-3">
+          <div class="text-center mt-4">
+            <h3>Interested in a Quote?</h3>
+            <h6 class="mb-3">We'll call you ASAP.</h6>
           </div>
-          <div class="text-center">
-            <span class="mdi mdi-email icon"></span>
-            <h3>Email Us</h3>  
-            <h5>riverrockroofing@icloud.com</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 d-flex justify-content-center align-items-center main-height jet-black af-bg-white">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-          <h4>Send Us Your Info</h4>
-          <h6 class="mb-3">We'll call you ASAP.</h6>
           <form @submit.prevent="sendMessage()">
             <div class="mb-3 d-flex justify-content-between">
               <div>
@@ -324,18 +313,61 @@ import { constactService } from "../services/ContactService";
           </form>
         </div>
       </div>
-      <div class="col-md-4 d-flex justify-content-center align-items-center main-height jet-bg-black af-white">
-        <div class="d-flex flex-column align-items-center justify-content-evenly">
-          <div class="text-center">
-            <span class="mdi mdi-map-marker-radius icon"></span>
-            <h3>Based In</h3>  
-            <h5>Kuna, ID</h5> 
+      <div class="col-md-6 d-none d-md-flex flex-column justify-content-center align-items-center main-height jet-bg-black af-white">
+        <div class="row align-items-center h-75 w-100">
+          <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
+            <div class="text-center">
+              <span class="mdi mdi-store-clock-outline icon"></span>
+              <h3>Contact Hours</h3>  
+              <h5>Mon-Fri</h5>
+              <h5>8am-6pm</h5>  
+            </div>
+            <div class="text-center">
+              <span class="mdi mdi-phone icon"></span>
+              <h3>Call Us</h3>  
+              <h5>208-794-3280</h5> 
+            </div>
           </div>
-          <div class="text-center">
-            <span class="mdi mdi-store-clock-outline icon"></span>
-            <h3>Contact Hours</h3>  
-            <h5>Mon-Fri</h5>
-            <h5>8am-6pm</h5>  
+          <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
+            <div class="text-center">
+              <span class="mdi mdi-map-marker-radius icon"></span>
+              <h3>Based In</h3>  
+              <h5>Kuna, ID</h5> 
+            </div>
+            <div class="text-center">
+              <span class="mdi mdi-email icon"></span>
+              <h3>Email Us</h3>  
+              <h5>riverrockroofing<br>@icloud.com</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 d-md-none d-flex flex-column justify-content-center align-items-center mobile-height jet-bg-black af-white">
+        <div class="row align-items-center h-75 w-100">
+          <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
+            <div class="text-center">
+              <span class="mdi mdi-store-clock-outline icon"></span>
+              <h3>Contact Hours</h3>  
+              <h5>Mon-Fri</h5>
+              <h5>8am-6pm</h5>  
+            </div>
+            <div class="text-center">
+              <span class="mdi mdi-phone icon"></span>
+              <h3>Call Us</h3>  
+              <h5>208-794-3280</h5> 
+            </div>
+          </div>
+          <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
+            <div class="text-center">
+              <span class="mdi mdi-map-marker-radius icon"></span>
+              <h3>Based In</h3>  
+              <h5>Kuna, ID</h5> 
+            </div>
+            <div class="text-center">
+              <span class="mdi mdi-email icon"></span>
+              <h3>Email Us</h3>  
+              <h5>riverrockroofing<br>@icloud.com</h5>
+            </div>
           </div>
         </div>
       </div>
@@ -357,7 +389,11 @@ import { constactService } from "../services/ContactService";
 }
 
 .main-height {
-  height: calc(100vh - 278.39px);
+  height: 100vh;
+}
+
+.mobile-height {
+  height: 60vh;
 }
 
 .icon {
