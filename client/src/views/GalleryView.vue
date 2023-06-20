@@ -8,46 +8,46 @@
       <div class="col-12 jet-bg-black">
         <section class="masonry">
           <div class="brick mb-3">
-            <img src="../assets/images/gallery9.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery9.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery1.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery1.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery5.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery5.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery7.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery7.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery15.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery15.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery3.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery3.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery6.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery6.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery14.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery14.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery8.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery8.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery10.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery10.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery4.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery4.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery11.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery11.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery12.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery12.jpg" class="w-100 rounded" alt="">
           </div>
           <div class="brick mb-3">
-            <img src="../assets/images/gallery13.jpg" class="img-fluid rounded" alt="">
+            <img src="../assets/images/gallery13.jpg" class="w-100 rounded" alt="">
           </div>
         </section>
       </div>
