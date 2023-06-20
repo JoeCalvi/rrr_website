@@ -8,7 +8,7 @@ import { RouterView } from 'vue-router'
       <div>
         <router-link :to="{ name: 'home' }">
           <img src="../src/assets/images/RRRlogo1.png" class="header-logo ps-3 selectable
-          ">
+          " alt="River Rock Roofing Logo">
         </router-link>
       </div>
       <div>
@@ -33,13 +33,13 @@ import { RouterView } from 'vue-router'
       </div>
     </div>
   </header>
-    <div class="collapse" id="navbarToggle" data-bs-theme="dark">
+    <div class="collapse d-md-none" id="navbarToggle" data-bs-theme="dark">
       <div class="bg-brown p-4">
         <div class="d-flex flex-column gap-3 align-items-center">
       <div>
         <router-link :to="{ name: 'home' }">
           <img src="../src/assets/images/RRRlogo1.png" class="header-logo ps-3 selectable
-          " data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+          " data-bs-toggle="collapse" data-bs-target="#navbarToggle" alt="River Rock Roofing Logo">
         </router-link>
       </div>
       <div>

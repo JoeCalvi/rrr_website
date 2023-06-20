@@ -5,7 +5,7 @@
 <template>
   <div class="container-fluid">
     <div class="row house-display border-bottom border-dark mb-3">
-      <div class="col-md-6 d-none d-md-block example-house">
+      <div class="col-md-6 d-none d-md-block example-house" title="Example Roof">
       </div>
       <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
         <div class="text-center">
@@ -126,7 +126,7 @@
       </div>
       <div class="col-md-5 d-none d-md-flex justify-content-center align-items-center">
         <a href="https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid">
-          <img src="../assets/images/RRRbrandLogo3square_thumbnail.png" class="gaf-logo-2 mb-3 p-3" title="See Shingle Selection" alt="">
+          <img src="../assets/images/RRRbrandLogo3square_thumbnail.png" class="gaf-logo-2 mb-3 p-3" title="See Shingle Selection" alt="GAF Master Elite Logo">
         </a>
       </div>
     </div>
@@ -155,22 +155,6 @@
   background-image: url(../assets/images/RRRhouse1.jpeg);
   background-position: center;
   background-size: cover;
-  height: 500px;
-}
-
-.example-house-2 {
-  background-image: url(../assets/images/RRRhouse3.jpeg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
-}
-
-.example-house-3 {
-  background-image: url(../assets/images/RRRhouse2.jpeg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 500px;
 }
 
