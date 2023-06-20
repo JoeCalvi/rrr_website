@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="navbar d-flex align-items-center elevation-3 justify-content-start">
+  <header class="navbar d-none d-md-flex align-items-center elevation-3 justify-content-start">
     <div class="d-flex gap-3 align-items-center">
       <div>
         <router-link :to="{ name: 'home' }">
@@ -33,6 +33,45 @@ import { RouterView } from 'vue-router'
       </div>
     </div>
   </header>
+    <div class="collapse" id="navbarToggle" data-bs-theme="dark">
+      <div class="bg-brown p-4">
+        <div class="d-flex flex-column gap-3 align-items-center">
+      <div>
+        <router-link :to="{ name: 'home' }">
+          <img src="../src/assets/images/RRRlogo1.png" class="header-logo ps-3 selectable
+          " data-bs-toggle="collapse" data-bs-target="#navbarToggle">
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'home' }">
+          <span data-bs-toggle="collapse" data-bs-target="#navbarToggle">Home</span>
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'about' }">
+          <span data-bs-toggle="collapse" data-bs-target="#navbarToggle">About</span>
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'gallery'}">
+          <span data-bs-toggle="collapse" data-bs-target="#navbarToggle">Gallery</span>
+        </router-link>
+      </div>
+      <div>
+        <router-link class="nav-link selectable" :to="{ name: 'contact'}">
+          <span data-bs-toggle="collapse" data-bs-target="#navbarToggle">Contact</span>
+        </router-link>
+      </div>
+    </div>
+      </div>
+    </div>
+    <nav class="navbar bg-brown d-flex d-md-none">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
   <main>
     <div class="container-fluid">
       <div class="row justify-content-center elevation-3 sticky-top af-bg-white border-bottom border-dark">
@@ -81,7 +120,6 @@ import { RouterView } from 'vue-router'
 .nav-link:hover {
   border-bottom: 1px solid #EAEBED;
 }
-
 .footer-logo {
   max-width: 100px;
   height: 45px;
