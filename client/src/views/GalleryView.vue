@@ -6,7 +6,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-12 jet-bg-black">
-        <section class="masonry">
+        <section class="masonry my-3">
           <div class="brick mb-3">
             <img src="../assets/images/gallery9.jpg" class="w-100 rounded" alt="">
           </div>
@@ -59,7 +59,7 @@
 
 .masonry {
   columns: 30vw;
-  column-gap: 2vw;
+  column-gap: 3vw;
   margin-top: 2vw;
 }
 
