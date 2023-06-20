@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="row jet-bg-black">
       <!-- TODO adjust for mobile -->
-      <div class="col-md-6 main-height d-flex align-items-center mb-3">
+      <div class="col-md-6 d-flex align-items-center my-3">
         <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="">
       </div>
       <div class="col-md-6 main-height d-flex align-items-center justify-content-center mb-3">
@@ -43,9 +43,9 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .main-height {
-  height: calc(100vh - 130px);
+  height: 65vh;
 }
 
 .bio {
