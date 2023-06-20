@@ -317,25 +317,25 @@ import { constactService } from "../services/ContactService";
         <div class="row align-items-center h-75 w-100">
           <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
             <div class="text-center">
-              <span class="mdi mdi-store-clock-outline icon"></span>
+              <span class="mdi mdi-store-clock-outline icon" title="Clock Icon"></span>
               <h3>Contact Hours</h3>  
               <h5>Mon-Fri</h5>
               <h5>8am-6pm</h5>  
             </div>
             <div class="text-center">
-              <span class="mdi mdi-phone icon"></span>
+              <span class="mdi mdi-phone icon" title="Phone Icon"></span>
               <h3>Call Us</h3>  
               <h5>208-794-3280</h5> 
             </div>
           </div>
           <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
             <div class="text-center">
-              <span class="mdi mdi-map-marker-radius icon"></span>
+              <span class="mdi mdi-map-marker-radius icon" title="Map Marker Icon"></span>
               <h3>Based In</h3>  
               <h5>Kuna, ID</h5> 
             </div>
             <div class="text-center">
-              <span class="mdi mdi-email icon"></span>
+              <span class="mdi mdi-email icon" title="Email Icon"></span>
               <h3>Email Us</h3>  
               <h5>riverrockroofing<br>@icloud.com</h5>
             </div>
@@ -346,25 +346,25 @@ import { constactService } from "../services/ContactService";
         <div class="row align-items-center h-75 w-100">
           <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
             <div class="text-center">
-              <span class="mdi mdi-store-clock-outline icon"></span>
+              <span class="mdi mdi-store-clock-outline icon" title="Clock Icon"></span>
               <h3>Contact Hours</h3>  
               <h5>Mon-Fri</h5>
               <h5>8am-6pm</h5>  
             </div>
             <div class="text-center">
-              <span class="mdi mdi-phone icon"></span>
+              <span class="mdi mdi-phone icon" title="Phone Icon"></span>
               <h3>Call Us</h3>  
               <h5>208-794-3280</h5> 
             </div>
           </div>
           <div class="col-6 h-75 d-flex flex-column justify-content-evenly align-items-center">
             <div class="text-center">
-              <span class="mdi mdi-map-marker-radius icon"></span>
+              <span class="mdi mdi-map-marker-radius icon" title="Map Marker Icon"></span>
               <h3>Based In</h3>  
               <h5>Kuna, ID</h5> 
             </div>
             <div class="text-center">
-              <span class="mdi mdi-email icon"></span>
+              <span class="mdi mdi-email icon" title="Email Icon"></span>
               <h3>Email Us</h3>  
               <h5>riverrockroofing<br>@icloud.com</h5>
             </div>
