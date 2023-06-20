@@ -7,7 +7,7 @@
         <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="">
       </div>
       <div class="col-md-6 main-height d-flex align-items-center justify-content-center mb-3">
-        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column h-100 justify-content-evenly align-items-center">
           <div class="text-center">
             <h1 class="font-bebas af-white">Who We Are</h1>
           </div>
