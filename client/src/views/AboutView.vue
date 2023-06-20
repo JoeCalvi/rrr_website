@@ -4,7 +4,7 @@
     <div class="row jet-bg-black">
       <!-- TODO adjust for mobile -->
       <div class="col-md-6 d-flex align-items-center my-3">
-        <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="">
+        <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="Phil and His Wife">
       </div>
       <div class="col-md-6 main-height d-flex align-items-center justify-content-center mb-3">
         <div class="d-flex flex-column h-100 justify-content-evenly align-items-center">

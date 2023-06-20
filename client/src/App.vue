@@ -85,11 +85,11 @@ import { RouterView } from 'vue-router'
   </main>
   <footer class="d-flex justify-content-evenly align-items-center">
     <div class="d-none d-md-block">
-      <img src="../src/assets/images/RRRbrandLogo2.jpeg" class="gaf-logo-3" alt="">
+      <img src="../src/assets/images/RRRbrandLogo2.jpeg" class="gaf-logo-3" alt="GAF Certified Roofing Contractor">
     </div>
     <div class="d-flex">
       <div>
-        <img src="../src/assets/images/RRRlogo2.png" class="footer-logo pe-3" alt="">
+        <img src="../src/assets/images/RRRlogo2.png" class="footer-logo pe-3" alt="River Rock Roofing Alternate Logo">
       </div>
       <div class="footer-text text-center">
         <div>
@@ -101,7 +101,7 @@ import { RouterView } from 'vue-router'
       </div>
     </div>
     <div class="d-none d-md-block">
-      <img src="../src/assets/images/RRRbrandLogo1.jpeg" class="gaf-logo-1" alt="">
+      <img src="../src/assets/images/RRRbrandLogo1.jpeg" class="gaf-logo-1" alt="GAF Authorized Roofing Contractor">
     </div>
   </footer>
 </template>
