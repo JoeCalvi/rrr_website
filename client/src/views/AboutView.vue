@@ -3,10 +3,10 @@
   <div class="container-fluid">
     <div class="row jet-bg-black">
       <!-- TODO adjust for mobile -->
-      <div class="col-md-6 main-height d-flex align-items-center">
+      <div class="col-md-6 main-height d-flex align-items-center mb-3">
         <img src="../assets/images/aboutmepicRRR.jpeg" class="img-fluid rounded elevation-3" alt="">
       </div>
-      <div class="col-md-6 main-height d-flex align-items-center justify-content-center">
+      <div class="col-md-6 main-height d-flex align-items-center justify-content-center mb-3">
         <div class="d-flex flex-column justify-content-center align-items-center">
           <div class="text-center">
             <h1 class="font-bebas af-white">Who We Are</h1>
@@ -46,7 +46,6 @@
 <style>
 .main-height {
   height: calc(100vh - 130px);
-  overflow-y: scroll;
 }
 
 .bio {
