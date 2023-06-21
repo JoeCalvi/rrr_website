@@ -2,6 +2,8 @@
 
 import { ref } from "vue";
 import { constactService } from "../services/ContactService";
+import { useRouter } from "vue-router";
+import Swal from 'sweetalert2'
 
     export default {
       data() {
@@ -10,8 +12,14 @@ import { constactService } from "../services/ContactService";
           type: "N/A",
           color: "N/A"
         })
+        
+        const router = useRouter();
+        const  swal =  Swal;
+
         return {
           editable,
+          router,
+          swal,
 
           async sendMessage() {
             try {
@@ -28,8 +36,13 @@ import { constactService } from "../services/ContactService";
               }
               
               await constactService.sendMessage(messageData)
-              // TODO add a confirmation that their request was sent
-
+              
+              if(await Swal.fire({
+                  title: 'Success!',
+                  text: 'Quote request sent.',
+                  icon: 'success',
+              })) { router.push({name: 'home'}) }
+              
             } catch (error) {
               console.error(error)
             }
