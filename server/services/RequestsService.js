@@ -1,12 +1,13 @@
 import { dbContext } from "../Db/DbContext";
 import { CourierClient } from "@trycourier/courier";
+import { courierToken } from "../authkey";
 
 class RequestService {
 
     async sendRequest(requestData) {
         const request = await dbContext.Requests.create(requestData)
 
-        const courier = CourierClient({ authorizationToken: "dk_prod_JJRNP0AHBV4Z3NJ3J18DEZ9ZY7GC" });
+        const courier = CourierClient({ authorizationToken: courierToken });
         const { requestId } = await courier.send({
             message: {
                 to: {
