@@ -44,11 +44,11 @@ var UsersService = /** @class */ (function () {
     UsersService.prototype.createUser = function (userData) {
         return __awaiter(this, void 0, void 0, function () {
             var user;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0: return [4 /*yield*/, DbContext_1.dbContext.Users.create(userData)];
                     case 1:
-                        user = _b.sent();
+                        user = _c.sent();
                         return [2 /*return*/, user];
                 }
             });

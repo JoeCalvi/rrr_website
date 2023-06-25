@@ -58,17 +58,17 @@ var Routes = /** @class */ (function () {
         this.express.use("/", user_1.default);
         this.express.post("/requests", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
             var requestData, request, error_1;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
-                        _b.trys.push([0, 2, , 3]);
+                        _c.trys.push([0, 2, , 3]);
                         requestData = req.body;
                         return [4 /*yield*/, RequestsService_1.requestsService.sendRequest(requestData)];
                     case 1:
-                        request = _b.sent();
+                        request = _c.sent();
                         return [2 /*return*/, res.send(request)];
                     case 2:
-                        error_1 = _b.sent();
+                        error_1 = _c.sent();
                         next(error_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];

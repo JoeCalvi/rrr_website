@@ -39,18 +39,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.requestsService = void 0;
 var DbContext_1 = require("../Db/DbContext");
 var courier_1 = require("@trycourier/courier");
+var authkey_1 = require("../authkey");
 var RequestService = /** @class */ (function () {
     function RequestService() {
     }
     RequestService.prototype.sendRequest = function (requestData) {
         return __awaiter(this, void 0, void 0, function () {
             var request, courier, requestId;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0: return [4 /*yield*/, DbContext_1.dbContext.Requests.create(requestData)];
                     case 1:
-                        request = _b.sent();
-                        courier = (0, courier_1.CourierClient)({ authorizationToken: "dk_prod_JJRNP0AHBV4Z3NJ3J18DEZ9ZY7GC" });
+                        request = _c.sent();
+                        courier = (0, courier_1.CourierClient)({ authorizationToken: authkey_1.courierToken });
                         return [4 /*yield*/, courier.send({
                                 message: {
                                     to: {
@@ -71,7 +72,7 @@ var RequestService = /** @class */ (function () {
                                 },
                             })];
                     case 2:
-                        requestId = (_b.sent()).requestId;
+                        requestId = (_c.sent()).requestId;
                         return [2 /*return*/, request];
                 }
             });

@@ -18,7 +18,10 @@ var App = /** @class */ (function () {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(process.cwd() + "/client/dist/"));
-        var allowedOrigins = ['http://localhost:3080'];
+        var allowedOrigins = [
+            'http://localhost:3080',
+            'https://riverrockroofing.onrender.com'
+        ];
         var options = {
             origin: allowedOrigins
         };

@@ -52,20 +52,20 @@ var DbConnection = /** @class */ (function () {
         if (connectionstring === void 0) { connectionstring = 'mongodb+srv://JoeCalvi:MXSADGinbLwiLrDt@joescluster.pnavs5z.mongodb.net/rrr_db?retryWrites=true&w=majority'; }
         return __awaiter(this, void 0, void 0, function () {
             var status, status_1, e_1;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            return __generator(this, function (_c) {
+                switch (_c.label) {
                     case 0:
                         status = 0;
-                        _b.label = 1;
+                        _c.label = 1;
                     case 1:
-                        _b.trys.push([1, 3, , 4]);
+                        _c.trys.push([1, 3, , 4]);
                         return [4 /*yield*/, mongoose_1.default.connect(connectionstring)];
                     case 2:
-                        status_1 = _b.sent();
+                        status_1 = _c.sent();
                         console.log('[CONNECTION TO DB SUCCESSFUL]');
                         return [2 /*return*/, status_1];
                     case 3:
-                        e_1 = _b.sent();
+                        e_1 = _c.sent();
                         console.error('[MONGOOSE CONNECTION ERROR]:', 'Invalid connection string');
                         return [2 /*return*/, status];
                     case 4: return [2 /*return*/];
