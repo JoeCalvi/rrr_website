@@ -38,7 +38,7 @@ class App {
 
     private routes(): void {
         this.express.get("/", (req, res, next) => {
-            res.sendFile(path.join(__dirname, "../../client/rrr_website/dist/index.html"));
+            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
         });
 
         // user route
@@ -46,7 +46,7 @@ class App {
 
         // Catch-all route to serve index.html for client-side routing
         this.express.get("*", (req, res, next) => {
-            res.sendFile(path.join(__dirname, "../../client/rrr_website/dist/index.html"));
+            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
         });
     }
 }
