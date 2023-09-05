@@ -26,7 +26,8 @@ class App {
 
         const allowedOrigins = [
             'http://localhost:3080',
-            'https://riverrockroofing.onrender.com'
+            'https://riverrockroofing.onrender.com',
+            'https://www.riverrockroofingid.com'
         ];
         const options: cors.CorsOptions = {
             origin: allowedOrigins
@@ -37,7 +38,7 @@ class App {
 
     private routes(): void {
         this.express.get("/", (req, res, next) => {
-            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
+            res.sendFile(path.join(__dirname, "../../client/rrr_website/dist/index.html"));
         });
 
         // user route
@@ -45,7 +46,7 @@ class App {
 
         // Catch-all route to serve index.html for client-side routing
         this.express.get("*", (req, res, next) => {
-            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
+            res.sendFile(path.join(__dirname, "../../client/rrr_website/dist/index.html"));
         });
     }
 }
