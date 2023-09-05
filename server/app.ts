@@ -4,28 +4,25 @@ import * as cors from "cors";
 import { Logger } from "./logger/logger";
 import Routes from "./routes/routes";
 import { CorsOptions } from "cors";
+import * as path from "path"; // Import path module
 
 class App {
-
     public express: express.Application;
     public logger: Logger;
-
-    // array to hold users
-    public users: any[];
 
     constructor() {
         this.express = express();
         this.middleware();
         this.routes();
-        this.users = [];
         this.logger = new Logger();
     }
 
-    // Configure Express middleware
     private middleware(): void {
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
-        this.express.use(express.static(process.cwd() + "/client/dist/"));
+
+        // Serve static files from the 'client/dist' directory
+        this.express.use(express.static(path.join(__dirname, "../client/dist")));
 
         const allowedOrigins = [
             'http://localhost:3080',
@@ -39,17 +36,16 @@ class App {
     }
 
     private routes(): void {
-
         this.express.get("/", (req, res, next) => {
-            res.sendFile(process.cwd() + "/client/rrr_website/dist/index.html");
+            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
         });
 
         // user route
         this.express.use("/api", Routes);
 
-        // handle undefined routes
-        this.express.use("*", (req, res, next) => {
-            res.send("Make sure URL is correct.");
+        // Catch-all route to serve index.html for client-side routing
+        this.express.get("*", (req, res, next) => {
+            res.sendFile(path.join(__dirname, "../client/rrr_website/dist/index.html"));
         });
     }
 }
